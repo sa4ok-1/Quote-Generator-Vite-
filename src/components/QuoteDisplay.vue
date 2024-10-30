@@ -13,9 +13,15 @@
         Clear History
       </button>
       <button @click="shareOnTelegram" v-if="quote">
-        <img class="telegtam-btn" src="../assets/icon-telegram.png" alt="telegram" />
+        <img
+          class="telegtam-btn"
+          src="../assets/icon-telegram.png"
+          alt="telegram"
+        />
       </button>
-      <button @click="shareOnFacebook" v-if="quote"><img src="../assets/icon-facebook.png" alt=""></button>
+      <button @click="shareOnFacebook" v-if="quote">
+        <img src="../assets/icon-facebook.png" alt="" />
+      </button>
     </div>
 
     <p v-if="errorMessage" class="error">{{ errorMessage }}</p>
@@ -46,6 +52,7 @@ export default {
         quote.value = newQuote;
         quoteHistory.value.unshift(newQuote);
       } catch (error) {
+        console.error("Error fetching quote:", error);
         errorMessage.value = "Failed to fetch quote. Please try again later.";
       }
     };

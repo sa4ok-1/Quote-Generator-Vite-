@@ -16,6 +16,5 @@ export default {
 <style>
 #app {
   text-align: center;
-  /* margin-top: 2rem; */
 }
 </style>
