@@ -6,14 +6,14 @@
 </template>
 
 <script>
-import QuoteDisplay from './components/QuoteDisplay.vue';
+import QuoteDisplay from "./components/QuoteDisplay.vue";
 
 export default {
-  components: { QuoteDisplay }
+  components: { QuoteDisplay },
 };
 </script>
 
-<style>
+<style scoped>
 #app {
   text-align: center;
 }
